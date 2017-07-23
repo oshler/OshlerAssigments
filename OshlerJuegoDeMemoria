@@ -1,0 +1,45 @@
+/*  Osler Villegas - WK02 Peer-graded Assignment: Juego de memoria
+ GetHub: oshler
+ */
+import UIKit
+
+var str1 = "Par!!! "
+var str2 = "Impar!!! "
+var str3 = "Bingo!!! "
+var str4 = "Viva Swift!!!"
+var strfinal = ""
+var resi = 0
+var div5 = 0
+
+for i in 0...100{
+    resi = i % 2
+    div5 = i % 5
+    
+    // par o impar
+    if resi == 1{
+        strfinal = str2
+    } else {
+        strfinal = str1
+    }
+    
+    // divisible entre 5
+    if div5 == 0 {
+        strfinal = strfinal + str3
+    } else{
+        
+    }
+    
+    switch i {
+    case 0:
+        print("#\(i)\n")
+    case 1...29:
+        print("#\(i)\t\(strfinal)\n")
+    case 30...40:
+        print("#\(i)\t\(strfinal)\(str4)\n")
+    case 41...100:
+        print("#\(i)\t\(strfinal)\n")
+    default:
+        print("#\(i)\t Número fuera de rango\n")
+    }
+}
+
